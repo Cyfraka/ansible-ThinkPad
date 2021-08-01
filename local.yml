@@ -43,7 +43,7 @@
     become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
-      Value: "'zoom'"
+      value: "'zoom'"
 
   - name: add ansible user
     user:
