@@ -25,6 +25,7 @@
         - vim
         - neofetch
         - gnome-tweaks
+        - cronie
 
   - name: copy wallpaper file
     copy:

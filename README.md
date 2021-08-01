@@ -1,4 +1,5 @@
 # ansible
 Ansible configuration for Fedora ThinkPad X-230 Workstation and Fedora Pi4 Server
 
-Work in progress  
+Work in progress 
+sudo ansible-pull -U https://github.com/Cyfraka/ansible.git 
