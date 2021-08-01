@@ -40,6 +40,27 @@
         - cronie
         - bpytop
 
+  - name: copy picture Dimov
+    copy:
+      src: files/Dimov.jpg
+      dest: /home/cyfraka/Pictures/Dimov.jpg
+      owner: cyfraka
+      group: cyfraka
+
+  - name: copy picture Cyfraka
+    copy:
+      src: files/Cyfraka.jpg
+      dest: /home/cyfraka/Pictures/Cyfraka.jpg
+      owner: cyfraka
+      group: cyfraka
+
+  - name: copy picture 80s
+    copy:
+      src: files/80s.jpg
+      dest: /home/cyfraka/Pictures/80s.jpg
+      owner: cyfraka
+      group: cyfraka
+
   - name: copy wallpaper file
     copy:
       src: files/80s.jpg
