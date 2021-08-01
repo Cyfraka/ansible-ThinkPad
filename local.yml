@@ -42,7 +42,7 @@
   - name: set wallpaper position
     become_user: cyfraka
     dconf:
-      key: "/org/gnome/desktop/background/pictures-uri"
+      key: "/org/gnome/desktop/background/picture-uri"
       Value: "'zoom'"
 
   - name: add ansible user
