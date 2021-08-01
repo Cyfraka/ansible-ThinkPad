@@ -12,3 +12,19 @@
         - neofetch
         - gnome-tweaks
 
+  - name: copy wallpaper file
+    copy:
+      src: files/80s.jpg
+      dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
+
+  - name: set wallpaper position
+    dconf:
+      key: "/org/gnome/desktop/background/pictures-uri"
+      Value: "'zoom'"
