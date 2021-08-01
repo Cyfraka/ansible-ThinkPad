@@ -45,7 +45,7 @@
       key: "/org/gnome/desktop/background/pictures-uri"
       Value: "'zoom'"
 
-- name: add ansible user
+  - name: add ansible user
     user:
       name: angel
       system: yes
