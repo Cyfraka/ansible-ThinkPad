@@ -20,11 +20,13 @@
       group: root
 
   - name: set wallpaper
+    become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: set wallpaper position
+    become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/background/pictures-uri"
       Value: "'zoom'"
