@@ -20,7 +20,7 @@
 
   - name: Ansible file module create directory
     file:
-      path: /home/cyfraka/kitty
+      path: /home/cyfraka/.config/kitty
       state: directory
 
   - name: Set Kitty .conf file
