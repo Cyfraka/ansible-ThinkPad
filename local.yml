@@ -18,6 +18,11 @@
       owner: cyfraka
       group: cyfraka      
 
+  - name: Ansible file module create directory
+    file:
+      path: /home/cyfraka/kitty
+      state: directory
+
   - name: Set Kitty .conf file
     copy:
       src: files/.config/kitty/kitty.conf
