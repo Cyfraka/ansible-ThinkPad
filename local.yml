@@ -33,6 +33,7 @@
         - neofetch
         - gnome-tweaks
         - cronie
+        - bpytop
 
   - name: copy wallpaper file
     copy:
