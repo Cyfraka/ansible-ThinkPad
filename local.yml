@@ -4,6 +4,20 @@
   become: true
 
   tasks:
+  - name: Set .bashrc file
+    copy:
+      src: files/.bashrc
+      dest: /home/cyfraka/.bashrc
+      owner: cyfraka
+      group: cyfraka
+
+  - name: Set .vimrc
+    copy:
+      src: files/.vimrc
+      dest: /home/cyfraka/.vimrc
+      owner: cyfraka
+      group: cyfraka      
+
   - name: install packages
     package:
       name: 
@@ -30,3 +44,24 @@
     dconf:
       key: "/org/gnome/desktop/background/pictures-uri"
       Value: "'zoom'"
+
+- name: add ansible user
+    user:
+      name: angel
+      system: yes
+
+  - name: set up sudo for ansible user
+    copy:
+      src: files/sudoer_angel
+      dest: /etc/sudoers.d/angel
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: angel
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/Cyfraka/ansible.git
+
