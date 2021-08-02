@@ -40,13 +40,6 @@
         - cronie
         - bpytop
 
-  - name: copy picture Dimov
-    copy:
-      src: files/Dimov.jpg
-      dest: /home/cyfraka/Pictures/Dimov.jpg
-      owner: cyfraka
-      group: cyfraka
-
   - name: copy picture Cyfraka
     copy:
       src: files/Cyfraka.jpg
