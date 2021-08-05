@@ -1,5 +1,5 @@
 ## Fedora Workstation ThinkPad X230
-Ansible configuration for Fedora Workstation ThinkPad X230 and Fedora Server Raspberry Pi4.
+Ansible configuration for Fedora Workstation ThinkPad X230 
 
 ## Work in progress.
 The playbook is working but is under development.
