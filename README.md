@@ -7,4 +7,4 @@ The playbook is working but is under development.
 ## Usage
 > sudo dnf install ansible git 
 
-> sudo ansible-pull -U https://github.com/Cyfraka/ansible.git 
+> sudo ansible-pull -U https://github.com/Cyfraka/x230-Fedora.git
