@@ -30,7 +30,7 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: install packages
+  - name: Install Packages
     package:
       name: 
         - kitty
@@ -40,39 +40,39 @@
         - cronie
         - bpytop
 
-  - name: copy picture Cyfraka
+  - name: Copy picture Cyfraka
     copy:
       src: files/Cyfraka.jpg
       dest: /home/cyfraka/Pictures/Cyfraka.jpg
       owner: cyfraka
       group: cyfraka
 
-  - name: copy picture 80s
+  - name: Copy picture 80s
     copy:
       src: files/80s.jpg
       dest: /home/cyfraka/Pictures/80s.jpg
       owner: cyfraka
       group: cyfraka
 
-  - name: copy wallpaper file
+  - name: Copy Wallpaper file
     copy:
       src: files/80s.jpg
       dest: /usr/share/backgrounds/ansible-wallpaper.jpg
       owner: root
       group: root
 
-  - name: set wallpaper
+  - name: Set Wallpaper
     become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
-  - name: add ansible user
+  - name: Add Ansible User
     user:
       name: angel
       system: yes
 
-  - name: set up sudo for ansible user
+  - name: Set sudo for Ansible User
     copy:
       src: files/sudoer_angel
       dest: /etc/sudoers.d/angel
@@ -80,7 +80,7 @@
       group: root
       mode: 0440
 
-  - name: add ansible-pull cron job
+  - name: Add Ansible-Pull Cron Job
     cron:
       name: ansible auto-provision
       user: angel
