@@ -85,5 +85,5 @@
       name: ansible auto-provision
       user: angel
       minute: "*/10"
-      job: ansible-pull -o -U https://github.com/Cyfraka/x230-Fedora.git
+      job: ansible-pull -o -U https://github.com/Cyfraka/x230-Ansible.git
 
