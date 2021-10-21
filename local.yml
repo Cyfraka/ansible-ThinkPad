@@ -66,10 +66,15 @@
       path: /home/cyfraka/.config/waybar
       state: directory
 
-
   - name: Set Waybar .conf file
     copy:
-      src: files/.config/waybar/config style.css
+      src: files/.config/waybar/config
+      owner: cyfraka
+      group: cyfraka
+
+  - name: Set Waybar .css file
+    copy:
+      src: files/.config/waybar/style.css
       owner: cyfraka
       group: cyfraka
 
