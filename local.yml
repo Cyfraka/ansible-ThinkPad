@@ -4,6 +4,25 @@
   become: true
 
   tasks:
+
+  - name: Install Packages
+    package:
+      name: 
+        - kitty
+        - vim
+        - neofetch
+        - gnome-tweaks
+        - cronie
+        - bpytop
+	- sway
+	- waybar
+	- brithnessctl
+	- pavucontrol
+	- thunar
+	- blueman
+	- dmenu
+	- xorg-xwayland
+
   - name: Set .bashrc file
     copy:
       src: files/.bashrc
@@ -30,15 +49,34 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: Install Packages
-    package:
-      name: 
-        - kitty
-        - vim
-        - neofetch
-        - gnome-tweaks
-        - cronie
-        - bpytop
+  - name: Create Sway directory
+    file:
+      path: /home/cyfraka/.config/sway
+      state: directory
+
+  - name: Set Sway .conf file
+    copy:
+      src: files/.config/sway/config
+      dest: /home/cufraka/.config/sway/config
+      owner: cyfraka
+      group: cyfraka
+
+  - name: Create waybar directory
+    file:
+      path: /home/cyfraka/.config/waybar
+      state: directory
+
+
+  - name: Set Waybar .conf file
+    copy:
+      src: files/.config/waybar/config style.css
+      owner: cyfraka
+      group: cyfraka
+
+  - name: Create Pictures directory
+    file:
+      path: /home/cyfraka/Pictures
+      state: directory
 
   - name: Copy picture Cyfraka
     copy:
