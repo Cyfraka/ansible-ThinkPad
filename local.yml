@@ -117,7 +117,7 @@
       group: root
 
   - name: Set Wallpaper
-    become_user: {{ ansible_user }}
+    become_user: "{{ ansible_user }}"
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/80s.jpg'"
