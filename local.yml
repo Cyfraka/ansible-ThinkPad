@@ -109,7 +109,7 @@
       owner: cyfraka
       group: cyfraka
 
- - name: Add Ansible User
+  - name: Add Ansible User
     user:
       name: angel
       system: yes
