@@ -69,12 +69,14 @@
   - name: Set Waybar .conf file
     copy:
       src: files/.config/waybar/config
+      dest: /home/cyfraka/.config/waybar/config
       owner: cyfraka
       group: cyfraka
 
   - name: Set Waybar .css file
     copy:
       src: files/.config/waybar/style.css
+      dest: /home/cyfraka/.config/waybar/style.css
       owner: cyfraka
       group: cyfraka
 
