@@ -36,78 +36,78 @@
   - name: Set .bashrc file
     copy:
       src: files/.bashrc
-      dest: /home/$USER/.bashrc
-      owner: $USER
-      group: $USER
+      dest: /home/cyfraka/.bashrc
+      owner: cyfraka
+      group: cyfraka
 
   - name: Set .vimrc file
     copy:
       src: files/.vimrc
-      dest: /home/{{ ansible_user }}/.vimrc
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/.vimrc
+      owner: cyfraka
+      group: cyfraka
 
   - name: Create Kitty directory
     file:
-      path: /home/{{ ansible_user }}/.config/kitty
+      path: /home/cyfraka/.config/kitty
       state: directory
 
   - name: Set Kitty .conf file
     copy:
       src: files/.config/kitty/kitty.conf
-      dest: /home/{{ ansible_user }}/.config/kitty/kitty.conf
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/.config/kitty/kitty.conf
+      owner: cyfraka
+      group: cyfraka
 
   - name: Create Sway directory
     file:
-      path: /home/{{ ansible_user }}/.config/sway
+      path: /home/cyfraka/.config/sway
       state: directory
 
   - name: Set Sway .conf file
     copy:
       src: files/.config/sway/config
-      dest: /home/{{ ansible_user }}/.config/sway/config
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/.config/sway/config
+      owner: cyfraka
+      group: cyfraka
 
   - name: Create waybar directory
     file:
-      path: /home/{{ ansible_user }}/.config/waybar
+      path: /home/cyfraka/.config/waybar
       state: directory
 
   - name: Set Waybar .conf file
     copy:
       src: files/.config/waybar/config
-      dest: /home/{{ ansible_user }}/.config/waybar/config
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/.config/waybar/config
+      owner: cyfraka
+      group: cyfraka
 
   - name: Set Waybar .css file
     copy:
       src: files/.config/waybar/style.css
-      dest: /home/{{ ansible_user }}/.config/waybar/style.css
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/.config/waybar/style.css
+      owner: cyfraka
+      group: cyfraka
 
   - name: Create Pictures directory
     file:
-      path: /home/{{ ansible_user }}/Pictures
+      path: /home/cyfraka/Pictures
       state: directory
 
   - name: Copy picture Cyfraka
     copy:
       src: files/Cyfraka.jpg
-      dest: /home/{{ ansible_user }}/Pictures/Cyfraka.jpg
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/Pictures/Cyfraka.jpg
+      owner: cyfraka
+      group: cyfraka
 
   - name: Copy picture 80s
     copy:
       src: files/80s.jpg
-      dest: /home/{{ ansible_user }}/Pictures/80s.jpg
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/cyfraka/Pictures/80s.jpg
+      owner: cyfraka
+      group: cyfraka
 
   - name: Copy Wallpaper file
     copy:
@@ -117,7 +117,7 @@
       group: root
 
   - name: Set Wallpaper
-    become_user: "{{ ansible_user }}"
+    become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/80s.jpg'"
