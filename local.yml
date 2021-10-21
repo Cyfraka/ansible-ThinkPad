@@ -37,15 +37,15 @@
     copy:
       src: files/.bashrc
       dest: /home/{{ ansible_user }}/.bashrc
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Set .vimrc file
     copy:
       src: files/.vimrc
       dest: /home/{{ ansible_user }}/.vimrc
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Create Kitty directory
     file:
@@ -56,8 +56,8 @@
     copy:
       src: files/.config/kitty/kitty.conf
       dest: /home/{{ ansible_user }}/.config/kitty/kitty.conf
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Create Sway directory
     file:
@@ -68,8 +68,8 @@
     copy:
       src: files/.config/sway/config
       dest: /home/{{ ansible_user }}/.config/sway/config
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Create waybar directory
     file:
@@ -80,15 +80,15 @@
     copy:
       src: files/.config/waybar/config
       dest: /home/{{ ansible_user }}/.config/waybar/config
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Set Waybar .css file
     copy:
       src: files/.config/waybar/style.css
       dest: /home/{{ ansible_user }}/.config/waybar/style.css
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Create Pictures directory
     file:
@@ -99,15 +99,15 @@
     copy:
       src: files/Cyfraka.jpg
       dest: /home/{{ ansible_user }}/Pictures/Cyfraka.jpg
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Copy picture 80s
     copy:
       src: files/80s.jpg
       dest: /home/{{ ansible_user }}/Pictures/80s.jpg
-      owner: {{ ansible_user }}
-      group: {{ ansible_user }}
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
 
   - name: Copy Wallpaper file
     copy:
