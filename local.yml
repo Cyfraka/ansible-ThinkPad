@@ -57,7 +57,7 @@
   - name: Set Sway .conf file
     copy:
       src: files/.config/sway/config
-      dest: /home/cufraka/.config/sway/config
+      dest: /home/cyfraka/.config/sway/config
       owner: cyfraka
       group: cyfraka
 
