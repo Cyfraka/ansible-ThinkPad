@@ -14,14 +14,14 @@
         - gnome-tweaks
         - cronie
         - bpytop
-	- sway
-	- waybar
-	- brithnessctl
-	- pavucontrol
-	- thunar
-	- blueman
-	- dmenu
-	- xorg-xwayland
+        - sway
+        - waybar
+        - brithnessctl
+        - pavucontrol
+        - thunar
+        - blueman
+        - dmenu
+        - xorg-xwayland
 
   - name: Set .bashrc file
     copy:
