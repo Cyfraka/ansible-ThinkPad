@@ -109,20 +109,7 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: Copy Wallpaper file
-    copy:
-      src: files/80s.jpg
-      dest: /usr/share/backgrounds/80s.jpg
-      owner: root
-      group: root
-
-  - name: Set Wallpaper
-    become_user: cyfraka
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/80s.jpg'"
-
-  - name: Add Ansible User
+ - name: Add Ansible User
     user:
       name: angel
       system: yes
