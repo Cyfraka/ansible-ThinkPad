@@ -36,9 +36,9 @@
   - name: Set .bashrc file
     copy:
       src: files/.bashrc
-      dest: /home/{{ ansible_user }}/.bashrc
-      owner: "{{ ansible_user }}"
-      group: "{{ ansible_user }}"
+      dest: /home/$USER/.bashrc
+      owner: $USER
+      group: $USER
 
   - name: Set .vimrc file
     copy:
