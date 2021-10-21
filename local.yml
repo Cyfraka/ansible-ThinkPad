@@ -16,12 +16,21 @@
         - bpytop
         - sway
         - waybar
+        - swayidle
+        - swaylock
         - brightnessctl
         - pavucontrol
+        - playerctl
         - thunar
         - blueman
         - dmenu
         - xorg-xwayland
+        - firefox
+        - ttf-hack
+        - ttf-font-awesome
+        - polkit-gnome
+        - eog
+        - grim
 
   - name: Set .bashrc file
     copy:
