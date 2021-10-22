@@ -63,7 +63,7 @@
       owner: cyfraka
       group: cyfraka
 
- - name: Create Kitty directory
+  - name: Create Kitty directory
     file:
       path: /home/cyfraka/.config/kitty
       state: directory
