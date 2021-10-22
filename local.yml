@@ -42,6 +42,13 @@
       owner: cyfraka
       group: cyfraka
 
+  - name: Set .bash_profile file
+    copy:
+      src: files/.bash_profile
+      dest: /home/cyfraka/.bash_profile
+      owner: cyfraka
+      group: cyfraka
+
   - name: Set .vimrc file
     copy:
       src: files/.vimrc
