@@ -131,4 +131,4 @@
         "exec": "date +'%d-%m-%Y %H:%M:%S'",
         "interval": 1
     }
-
+}
