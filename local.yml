@@ -28,7 +28,7 @@
         - firefox
         - ttf-hack
         - ttf-font-awesome
-        - polkit-gnome
+        - xfce-polkit
         - eog
         - grim
         - signal-desktop
