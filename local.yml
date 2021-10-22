@@ -60,6 +60,8 @@
     file:
       path: /home/cyfraka/.config/kitty
       state: directory
+      owner: cyfraka
+      group: cyfraka
 
   - name: Set Kitty .conf file
     copy:
@@ -72,6 +74,8 @@
     file:
       path: /home/cyfraka/.config/sway
       state: directory
+      owner: cyfraka
+      group: cyfraka
 
   - name: Set Sway .conf file
     copy:
@@ -84,6 +88,8 @@
     file:
       path: /home/cyfraka/.config/waybar
       state: directory
+      owner: cyfraka
+      group: cyfraka
 
   - name: Set Waybar .conf file
     copy:
@@ -103,6 +109,8 @@
     file:
       path: /home/cyfraka/Pictures
       state: directory
+      owner: cyfraka
+      group: cyfraka
 
   - name: Copy picture Cyfraka
     copy:
