@@ -23,6 +23,9 @@
     # Your prefered browser
     set $browser firefox
 
+    # Your prefered filemanager
+    set $filemanager thunar
+
     #Fonts (ttf-hack and ttf-fontawesome for waaybar)
     font pango:Hack 11
 
@@ -108,6 +111,9 @@
 
     # Start Browser
     bindsym $mod+w exec $browser
+
+    # Start FileManager
+    bindsym $mod+a exec $filemanager
 
     # PrintScreen
     bindsym Print exec grim $HOME/Pictures/$(date +'%s_grim.png')
