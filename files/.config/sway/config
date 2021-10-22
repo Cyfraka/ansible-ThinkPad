@@ -1,13 +1,11 @@
 ################################
 ### Cyfraka config for Sway  ###
 ################################
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
 
 #
 ### Variables
 #
+
     # Logo key. Use Mod1 for Alt or Mod4 for Home.
     set $mod Mod4
 
@@ -40,25 +38,28 @@
 #
 ### Output configuration
 #
+
     # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
     output * bg /home/cyfraka/Pictures/80s.jpg fill
 
 #
 ### Display configuration:
 #
-#focus output LVDS-1
-#output LVDS-1 pos 0 1080 res 1366x768
-#output VGA-1 pos 0 0 res 1920x1080
+
+    #focus output LVDS-1
+    #output LVDS-1 pos 0 1080 res 1366x768
+    #output VGA-1 pos 0 0 res 1920x1080
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 #
 ### Idle configuration
 # 
+
     exec swayidle -w \
-          timeout 1200 'swaylock -f -c 000000' \
-          timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+    timeout 1200 'swaylock -f -c 000000' \
+    timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -67,6 +68,7 @@
 #
 ### Input configuration
 #
+
     input * {
        dwt enabled
        natural_scroll enabled
@@ -100,6 +102,7 @@
 #
 ### Basics:
 #
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -133,9 +136,11 @@
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
 #
 ### Moving around:
 #
+
     # Move your focus around
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -147,9 +152,11 @@
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
 #
 ### Workspaces:
 #
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -175,9 +182,11 @@
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
 #
 ### Layout stuff:
 #
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
@@ -200,9 +209,11 @@
 
     # Move focus to the parent container
     bindsym $mod+p focus parent
+
 #
 ### Scratchpad:
 #
+
     # Sway has a "scratchpad", which is a bag of holding for windows.
     # You can send windows there and get them back later.
 
@@ -212,10 +223,12 @@
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
 #
 ### Resizing containers:
 #
-mode "resize" {
+
+    mode "resize" {
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
     bindsym Down resize grow height 10px
@@ -225,12 +238,13 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-}
-
     bindsym $mod+r mode "resize"
+    }
+
 #
 ### General settings
 #
+
     default_border pixel 0 
     default_floating_border pixel 0
     focus_follows_mouse yes
@@ -240,16 +254,17 @@ mode "resize" {
 #
 #hide mouse on inactivity
 #
+
     seat * hide_cursor 1000
 
 #
 ### Status Bar:
 #
     bar {
-      swaybar_command waybar
-      position top
-      font pango:Hack 11
-    }
+    swaybar_command waybar
+    position top
+    font pango:Hack 11
+    } 
 
 #
 # END
