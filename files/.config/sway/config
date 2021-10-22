@@ -28,7 +28,6 @@
 
     # Your prefered polkit
     exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-    #exec xfce-polkit
 
     # Your preferred application launcher
     # Note: pass the final command to swaymsg so that the resulting window can be opened

@@ -29,6 +29,7 @@
         - ttf-hack
         - ttf-font-awesome
         - polkit-gnome
+        - xorg-xhost
         - eog
         - grim
         - signal-desktop
