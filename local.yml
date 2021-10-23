@@ -12,6 +12,7 @@
         - vim
         - bash-completion
         - neofetch
+        - gnome
         - gnome-tweaks
         - cronie
         - bpytop
@@ -133,6 +134,19 @@
       dest: /home/cyfraka/Pictures/80s.jpg
       owner: cyfraka
       group: cyfraka
+
+  - name: copy wallpaper file
+    copy:
+      src: files/80s.jpg
+      dest: /usr/share/backgrounds/ansible-wallpaper.jpg
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: Add Ansible User
     user:
