@@ -149,14 +149,16 @@
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
   - name: set languages
-      dconf:
-        key: "/org/gnome/desktop/input-sources"
-        value: "[('xkb', 'us'), ('xkb', 'bg+phonetic'), ('xkb', 'pl')]"
+    become_user:
+    dconf:
+      key: "/org/gnome/desktop/input-sources"
+      value: "[('xkb', 'us'), ('xkb', 'bg+phonetic'), ('xkb', 'pl')]"
 
   - name: automatic timezone
-      dconf:
-        key: "/org/gnome/desktop/datetime/automatic-timezone"
-        value: "true"
+    become_user:
+    dconf:
+      key: "/org/gnome/desktop/datetime/automatic-timezone"
+      value: "true"
 
   - name: clock show date
       dconf:
