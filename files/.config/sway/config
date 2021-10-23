@@ -40,7 +40,7 @@
 #
 
     # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-    output * bg /home/cyfraka/Pictures/80s.jpg fill
+    output * bg /home/cyfraka/Pictures/Wallpapers/80s.jpg fill
 
 #
 ### Display configuration:
