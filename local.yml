@@ -148,7 +148,7 @@
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
- - name: gnome | keybindings | set custom-keybindings
+  - name: gnome | keybindings | set custom-keybindings
     tags: gnome,keybindings
     become_user: cyfraka
     dconf:
@@ -188,23 +188,23 @@
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>a'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'t  hunar'" }
 
-   - name: gnome | keybindings | set Close
-     tags: gnome,keybindings
-     become_user: cyfraka
-     dconf:
-       key: "{{ item.key }}"
-       value: "{{ item.value}}"
+  - name: gnome | keybindings | set Close
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "{{ item.key }}"
+      value: "{{ item.value}}"
     with_items:
       - { key: "/org/gnome/desktop/wm/keybindings/close", value: "'<Super>q'" }
  
-   - name: gnome | keybindings | set key bindings
-     tags: gnome,keybindings
-     become_user: cyfraka
-     dconf:
-       key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
-       value: "{{ item.value}}"
-     with_items:
-       - { key: toggle-fullscreen, value: "'<Super>f'" }
+  - name: gnome | keybindings | set key bindings
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+      - { key: toggle-fullscreen, value: "'<Super>f'" }
 
   - name: gnome | appearance | set GTK theme
     become_user: cyfraka
