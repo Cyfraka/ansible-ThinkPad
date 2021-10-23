@@ -12,4 +12,4 @@ After the initial ansible-pull command the playbok is creating a user and cron j
 ## How to use it?
 > sudo pacman -S ansible git 
 
-> sudo ansible-pull -U https://github.com/Cyfraka/x230-Ansible.git
+> sudo ansible-pull -U https://github.com/Cyfraka/x230-ansible.git
