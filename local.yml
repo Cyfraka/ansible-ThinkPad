@@ -155,6 +155,13 @@
       value: "{{ item.value}}"
     with_items:
       - { key: close, value: "'<Super>q'" }
+ 
+  - name: gnome | keybindings | set key bindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
       - { key: toggle-fullscreen, value: "'<Super>f'" }
 
   - name: gnome | keybindings | set custom-keybindings
