@@ -193,10 +193,10 @@
     tags: gnome,keybindings
     become_user: cyfraka
     dconf:
-      key: "{{ item.key }}"
+      key: "{/org/gnome/desktop/wm/keybindings/{{ item.key }}"
       value: "{{ item.value}}"
     with_items:
-     - { key: "/org/gnome/desktop/wm/keybindings/close", value: "['<Super>q']" }
+     - { key: close, value: "['<Super>q']" }
 
   - name: gnome | keybindings | set Fullscreen
     tags: gnome,keybindings
