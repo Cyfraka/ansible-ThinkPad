@@ -149,41 +149,46 @@
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
   - name: set languages
-    become_user:
+    become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/input-sources"
       value: "[('xkb', 'us'), ('xkb', 'bg+phonetic'), ('xkb', 'pl')]"
 
   - name: automatic timezone
-    become_user:
+    become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/datetime/automatic-timezone"
       value: "true"
 
   - name: clock show date
-      dconf:
-        key: "/org/gnome/desktop/interface/clock-show-date"
-        value: "true"
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/interface/clock-show-date"
+      value: "true"
 
   - name: clock format
-      dconf:
-        key: "/org/gnome/desktop/interface/clock-format"
-        value: "'24h'"
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/interface/clock-format"
+      value: "'24h'"
 
   - name: never blank screen
-      dconf:
-        key: "/org/gnome/desktop/session/idle-delay"
-        value: "uint32 0"
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/session/idle-delay"
+      value: "uint32 0"
 
   - name: inactive timeout
-      dconf:
-        key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
-        value: "'nothing'"
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
+      value: "'nothing'"
 
   - name: show battery percentage
-      dconf:
-        key: "/org/gnome/desktop/interface/show-battery-percentage"
-        value: "true"
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/interface/show-battery-percentage"
+      value: "true"
 
   - name: gnome | keybindings | set custom-keybindings
     tags: gnome,keybindings
