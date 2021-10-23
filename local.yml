@@ -10,6 +10,7 @@
       name: 
         - kitty
         - vim
+        - bash-completion
         - neofetch
         - gnome-tweaks
         - cronie
