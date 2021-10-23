@@ -148,6 +148,14 @@
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
+  - name: gnome | keybindings | set key bindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+      - { key: close, value: "'<Super>q'" }
+      - { key: toggle-fullscreen, value: "'<Super>f'" }
 
   - name: gnome | keybindings | set custom-keybindings
     tags: gnome,keybindings
@@ -187,8 +195,13 @@
     with_items:
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name", value: "'Thunar'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>a'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'thunar'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'t  hunar'" }
 
+  - name: gnome | appearance | set GTK theme
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/interface/gtk-theme"
+      value: "'Adwaita-dark'"
 
   - name: Add Ansible User
     user:
