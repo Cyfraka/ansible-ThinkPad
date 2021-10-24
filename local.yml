@@ -51,6 +51,7 @@
         - gnome-software
         - gnome-system-monitor
         - gnome-terminal
+        - gnome-epub-thumbnailer
         - epiphany
       state: absent
 
