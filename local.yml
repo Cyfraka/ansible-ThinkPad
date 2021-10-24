@@ -37,6 +37,8 @@
         - grim
         - signal-desktop
 
+  task:
+
   - name: Remove Packages
     packege:
       name:
