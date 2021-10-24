@@ -36,13 +36,17 @@
         - eog
         - grim
         - signal-desktop
+        - totem
       state: present
 
   - name: Remove Packages
     ansible.builtin.package:
       name:
+        - gnome-autoar
+        - gnome-backgrounds
         - gnome-books
         - gnome-calculator
+        - gnome-color-manager
         - gnome-clocks
         - gnome-contacts
         - gnome-font-viewer
@@ -51,6 +55,7 @@
         - gnome-software
         - gnome-system-monitor
         - gnome-terminal
+        - gnome-user-docs
         - gnome-epub-thumbnailer
         - epiphany
       state: absent
