@@ -36,8 +36,7 @@
         - eog
         - grim
         - signal-desktop
-
-  task:
+      state: present
 
   - name: Remove Packages
     packege:
@@ -47,7 +46,7 @@
         - gnome-clocks
         - gnome-contacts
         - gnome-font-viewer
-    state: absent
+      state: absent
 
   - name: Set .bashrc file
     copy:
