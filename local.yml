@@ -46,6 +46,12 @@
         - gnome-clocks
         - gnome-contacts
         - gnome-font-viewer
+        - gnome-characters
+        - gnome-maps
+        - gnome-software
+        - gnome-system-monitor
+        - gnome-terminal
+        - epiphany
       state: absent
 
   - name: Set .bashrc file
