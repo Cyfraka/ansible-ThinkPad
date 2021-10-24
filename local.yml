@@ -238,6 +238,42 @@
       key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
       value: "{{ item.value}}"
     with_items:
+     - { key: switch-to-workspace-1, value: "['<Super>1']" }
+
+  - name: gnome | keybindings | set Close
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: switch-to-workspace-2, value: "['<Super>2']" }
+
+  - name: gnome | keybindings | set Close
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: switch-to-workspace-3, value: "['<Super>3']" }
+
+  - name: gnome | keybindings | set Close
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: switch-to-workspace-4, value: "['<Super>4']" }
+
+  - name: gnome | keybindings | set Close
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
      - { key: close, value: "['<Super>q']" }
 
   - name: gnome | keybindings | set Fullscreen
