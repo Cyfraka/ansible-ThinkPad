@@ -42,7 +42,6 @@
   - name: Remove Packages
     ansible.builtin.package:
       name:
-        - gnome-autoar
         - gnome-backgrounds
         - gnome-books
         - gnome-calculator
