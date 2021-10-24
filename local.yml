@@ -45,7 +45,7 @@
         - gnome-clocks
         - gnome-contacts
         - gnome-font-viewer
-      state: absent
+    state: absent
 
   - name: Set .bashrc file
     copy:
