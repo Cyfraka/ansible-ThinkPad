@@ -172,13 +172,7 @@
       key: "/org/gnome/desktop/interface/clock-format"
       value: "'24h'"
 
-  - name: never blank screen
-    become_user: cyfraka
-    dconf:
-      key: "/org/gnome/desktop/session/idle-delay"
-      value: "uint32 0"
-
-  - name: inactive timeout
+ - name: inactive timeout
     become_user: cyfraka
     dconf:
       key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
