@@ -231,7 +231,7 @@
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'t  hunar'" }
 
 
-  - name: gnome | keybindings | set Close
+  - name: gnome | keybindings | set Workspace 1
     tags: gnome,keybindings
     become_user: cyfraka
     dconf:
@@ -240,7 +240,7 @@
     with_items:
      - { key: switch-to-workspace-1, value: "['<Super>1']" }
 
-  - name: gnome | keybindings | set Close
+  - name: gnome | keybindings | set Workspace 2
     tags: gnome,keybindings
     become_user: cyfraka
     dconf:
@@ -249,7 +249,7 @@
     with_items:
      - { key: switch-to-workspace-2, value: "['<Super>2']" }
 
-  - name: gnome | keybindings | set Close
+  - name: gnome | keybindings | set Workspace 3
     tags: gnome,keybindings
     become_user: cyfraka
     dconf:
@@ -258,7 +258,7 @@
     with_items:
      - { key: switch-to-workspace-3, value: "['<Super>3']" }
 
-  - name: gnome | keybindings | set Close
+  - name: gnome | keybindings | set Workspace 4
     tags: gnome,keybindings
     become_user: cyfraka
     dconf:
@@ -266,6 +266,43 @@
       value: "{{ item.value}}"
     with_items:
      - { key: switch-to-workspace-4, value: "['<Super>4']" }
+
+  - name: gnome | keybindings | move to Workspace 1
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: move-to-workspace-1, value: "['<Shift><Super>exclam']" }
+
+  - name: gnome | keybindings | move to Workspace 2
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: move-to-workspace-2, value: "['<Shift><Super>at']" }
+
+  - name: gnome | keybindings | move to Workspace 3
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: move-to-workspace-3, value: "['<Shift><Super>numbersign']" }
+
+  - name: gnome | keybindings | move to Workspace 4
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/desktop/wm/keybindings/{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+     - { key: move-to-workspace-4, value: "['<Shift><Super>dollar']" }
+
 
   - name: gnome | keybindings | set Close
     tags: gnome,keybindings
