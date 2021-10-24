@@ -172,7 +172,7 @@
       key: "/org/gnome/desktop/interface/clock-format"
       value: "'24h'"
 
- - name: inactive timeout
+  - name: inactive timeout
     become_user: cyfraka
     dconf:
       key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
