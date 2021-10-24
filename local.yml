@@ -6,7 +6,7 @@
   tasks:
 
   - name: Install Packages
-    package:
+    ansible.builtin.package:
       name: 
         - kitty
         - vim
@@ -39,7 +39,7 @@
       state: present
 
   - name: Remove Packages
-    packege:
+    ansible.builtin.package:
       name:
         - gnome-books
         - gnome-calculator
