@@ -37,6 +37,16 @@
         - grim
         - signal-desktop
 
+  - name: Remove Packages
+    packege:
+      name:
+        - gnome-books
+        - gnome-calculator
+        - gnome-clocks
+        - gnome-contacts
+        - gnome-font-viewer
+      state: absent
+
   - name: Set .bashrc file
     copy:
       src: files/.bashrc
