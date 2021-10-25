@@ -204,18 +204,6 @@
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
-  - name: set languages
-    become_user: cyfraka
-    dconf:
-      key: "/org/gnome/desktop/input-sources"
-      value: "[('xkb', 'us'), ('xkb', 'bg+phonetic'), ('xkb', 'pl')]"
-
-  - name: automatic timezone
-    become_user: cyfraka
-    dconf:
-      key: "/org/gnome/desktop/datetime/automatic-timezone"
-      value: "true"
-
   - name: clock show date
     become_user: cyfraka
     dconf:
@@ -247,7 +235,7 @@
     become_user: cyfraka
     dconf:
       key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-      value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
+      value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
 
   - name: gnome | keybindings | set Kitty keybinding
     tags: gnome,keybindings
@@ -270,18 +258,6 @@
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "'Firefox'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Super>w'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'firefox'" }
-
-  - name: gnome | keybindings | set Thunar keybinding
-    tags: gnome,keybindings
-    become_user: cyfraka
-    dconf:
-      key: "{{ item.key }}"
-      value: "{{ item.value}}"
-    with_items:
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name", value: "'Thunar'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>a'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'t  hunar'" }
-
 
   - name: gnome | keybindings | set Workspace 1
     tags: gnome,keybindings
