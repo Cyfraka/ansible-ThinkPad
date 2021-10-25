@@ -10,6 +10,10 @@ By this playbook I am able to manage installed application and config/dot files 
 After the initial ansible-pull command the playbok is creating a user and cron job to autoupdate if this repository is updated.
 
 ## How to use it?
+If you use Arch Linux
 > sudo pacman -S ansible git 
+> sudo ansible-pull -U https://github.com/Cyfraka/x230-ansible.git
 
+If you use Fedora Linux
+> sudo dnf install ansible git 
 > sudo ansible-pull -U https://github.com/Cyfraka/x230-ansible.git
