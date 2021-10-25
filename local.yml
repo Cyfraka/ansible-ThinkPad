@@ -80,7 +80,6 @@
         - thunar
         - blueman
         - dmenu
-        - xorg-xwayland
         - firefox
         - polkit-gnome
         - gvfs
