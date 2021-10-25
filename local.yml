@@ -38,7 +38,7 @@
         - signal-desktop
         - totem
       state: present
-    when: ansible_distribution == "Arch Linux"
+    when: ansible_distribution == "Arch"
 
   - name: Remove Arch linux Packages
     ansible.builtin.package:
@@ -58,7 +58,7 @@
         - gnome-epub-thumbnailer
         - epiphany
       state: absent
-    when: ansible_distribution == "Arch Linux"
+    when: ansible_distribution == "Arch"
 
   - name: Install Fedora Linux Packages
     dnf:
