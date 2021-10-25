@@ -70,7 +70,7 @@
         - gnome-tweaks
         - cronie
         - bpytop
-     state: present
+      state: present
     when: ansible_distribution == "Fedora"
 
   - name: Remove Fedora Packages
