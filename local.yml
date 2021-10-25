@@ -70,23 +70,7 @@
         - gnome-tweaks
         - cronie
         - bpytop
-        - sway
-        - waybar
-        - swayidle
-        - swaylock
-        - brightnessctl
-        - pavucontrol
-        - playerctl
-        - thunar
-        - blueman
-        - dmenu
-        - firefox
-        - polkit-gnome
-        - gvfs
-        - eog
-        - grim
-        - totem
-      state: present
+     state: present
     when: ansible_distribution == "Fedora"
 
   - name: Remove Fedora Packages
