@@ -188,6 +188,8 @@
     become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/interface/clock-show-date"
+      key: "/org/gnome/desktop/interface/clock-show-weekday"
+      key: "/org/gnome/desktop/interface/clock-show-seconds"
       value: "true"
 
   - name: clock format
