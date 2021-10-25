@@ -5,7 +5,7 @@
 
   tasks:
 
-  - name: Install Packages
+  - name: Install Arch Linux Packages
     ansible.builtin.package:
       name: 
         - kitty
@@ -40,7 +40,7 @@
       state: present
     when: ansible_distribution == "Arch Linux"
 
-  - name: Remove Packages
+  - name: Remove Arch linux Packages
     ansible.builtin.package:
       name:
         - gnome-backgrounds
@@ -60,7 +60,7 @@
       state: absent
     when: ansible_distribution == "Arch Linux"
 
-  - name: Install Packages
+  - name: Install Fedora Linux Packages
     dnf:
       name: 
         - kitty
@@ -93,9 +93,9 @@
         - signal-desktop
         - totem
       state: present
-    when: ansible_distribution == "Fedora Linux"
+    when: ansible_distribution == "Fedora"
 
-  - name: Remove Packages
+  - name: Remove Fedora Linux Packages
     dnf:
       name:
         - gnome-backgrounds
@@ -113,9 +113,7 @@
         - gnome-epub-thumbnailer
         - epiphany
       state: absent
-    when: ansible_distribution == "Fedora Linux"
-
-
+    when: ansible_distribution == "Fedora"
 
   - name: Set .bashrc file
     copy:
