@@ -5,7 +5,7 @@
 
   tasks:
 
-  - name: Install Arch Linux Packages
+  - name: Install Archlinux Packages
     ansible.builtin.package:
       name: 
         - kitty
@@ -38,9 +38,9 @@
         - signal-desktop
         - totem
       state: present
-    when: ansible_distribution == "Arch"
+    when: ansible_distribution == "Archlinux"
 
-  - name: Remove Arch linux Packages
+  - name: Remove Archlinux Packages
     ansible.builtin.package:
       name:
         - gnome-backgrounds
@@ -58,16 +58,15 @@
         - gnome-epub-thumbnailer
         - epiphany
       state: absent
-    when: ansible_distribution == "Arch"
+    when: ansible_distribution == "Archlinux"
 
-  - name: Install Fedora Linux Packages
+  - name: Install Fedora Packages
     dnf:
       name: 
         - kitty
         - vim
         - bash-completion
         - neofetch
-        - gnome
         - gnome-tweaks
         - cronie
         - bpytop
@@ -83,19 +82,15 @@
         - dmenu
         - xorg-xwayland
         - firefox
-        - ttf-hack
-        - ttf-font-awesome
         - polkit-gnome
-        - xorg-xhost
         - gvfs
         - eog
         - grim
-        - signal-desktop
         - totem
       state: present
     when: ansible_distribution == "Fedora"
 
-  - name: Remove Fedora Linux Packages
+  - name: Remove Fedora Packages
     dnf:
       name:
         - gnome-backgrounds
