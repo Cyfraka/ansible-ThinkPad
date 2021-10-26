@@ -78,20 +78,7 @@
   - name: Remove Fedora Packages
     dnf:
       name:
-        - gnome-backgrounds
-        - gnome-books
-        - gnome-calculator
-        - gnome-clocks
-        - gnome-contacts
-        - gnome-font-viewer
-        - gnome-characters
-        - gnome-maps
-        - gnome-software
-        - gnome-system-monitor
-        - gnome-terminal
-        - gnome-user-docs
-        - gnome-epub-thumbnailer
-        - epiphany
+       - epiphany
       state: absent
     when: ansible_distribution == "Fedora"
 
