@@ -52,6 +52,7 @@
         - gnome-font-viewer
         - gnome-characters
         - gnome-maps
+        - gnone-software-packagekit-plugin
         - gnome-software
         - gnome-system-monitor
         - gnome-terminal
