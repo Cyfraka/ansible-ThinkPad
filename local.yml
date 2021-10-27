@@ -74,6 +74,7 @@
         - bpytop
         - sway
         - waybar
+        - pavucontrol
       state: present
     when: ansible_distribution == "Fedora"
 
