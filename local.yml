@@ -75,6 +75,8 @@
         - sway
         - waybar
         - pavucontrol
+        - brightnessctl
+        - playerctl
       state: present
     when: ansible_distribution == "Fedora"
 
