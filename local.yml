@@ -181,7 +181,7 @@
   - name: Copy picture Cyfraka
     copy:
       src: files/Cyfraka.jpg
-      dest: /home/cyfraka/Pictures/Cyfraka.jpg
+      dest: /home/cyfraka/Pictures/Wallpapers/Cyfraka.jpg
       owner: cyfraka
       group: cyfraka
 

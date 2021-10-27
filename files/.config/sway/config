@@ -263,7 +263,7 @@
     bar {
     swaybar_command waybar
     position top
-    font pango:Fira 11
+    font pango:Fira 12
     } 
 
 #
