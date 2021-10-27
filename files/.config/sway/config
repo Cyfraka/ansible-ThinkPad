@@ -24,8 +24,8 @@
     # Your prefered filemanager
     set $filemanager thunar
 
-    #Fonts ( ttf-fontawesome for waybar)
-    font pango:Fira 9
+    #Fonts (ttf-fontawesome for waybar)
+    font pango:Fira 10
 
     # Your prefered polkit
     exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -263,7 +263,6 @@
     bar {
     swaybar_command waybar
     position top
-    font pango:Fira 9
     } 
 
 #
