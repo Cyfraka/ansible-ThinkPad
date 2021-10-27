@@ -72,6 +72,8 @@
         - gnome-tweaks
         - cronie
         - bpytop
+        - sway
+        - waybar
       state: present
     when: ansible_distribution == "Fedora"
 
