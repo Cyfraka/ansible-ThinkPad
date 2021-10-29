@@ -1,14 +1,14 @@
 * {
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Fira Mono Medium", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.3);
+    background-color: rgba(43, 48, 59, 0.0);
     border-bottom: 2px solid rgba(100, 114, 125, 0.0);
     color: #ffffff;
     transition-property: background-color;
@@ -39,7 +39,7 @@ window#waybar.chromium {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 0.4em;
     background-color: transparent;
     color: #ffffff;
     /* Use box-shadow instead of border so the text isn't offset */
@@ -65,7 +65,7 @@ window#waybar.chromium {
 
 #mode {
     background-color: #2980b9;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 #clock,
