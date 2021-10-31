@@ -12,7 +12,6 @@
         - vim
         - bash-completion
         - neofetch
-        - gnome
         - gnome-tweaks
         - cronie
         - bpytop
