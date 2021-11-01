@@ -24,10 +24,10 @@
         - playerctl
         - thunar
         - blueman
+        - pulseaudio-bluetooth
         - dmenu
         - xorg-xwayland
         - firefox
-        - ttf-hack
         - ttf-font-awesome
         - polkit-gnome
         - xorg-xhost
@@ -204,12 +204,6 @@
       key: "/org/gnome/desktop/interface/clock-show-weekday"
       key: "/org/gnome/desktop/interface/clock-show-seconds"
       value: "true"
-
-  - name: clock format
-    become_user: cyfraka
-    dconf:
-      key: "/org/gnome/desktop/interface/clock-format"
-      value: "'24h'"
 
   - name: inactive timeout
     become_user: cyfraka
