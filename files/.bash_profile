@@ -8,3 +8,4 @@ if [ "$(tty)" = "/dev/tty1" ]; then
 fi
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+export GPG_TTY=$(tty)
