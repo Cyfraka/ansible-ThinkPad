@@ -76,6 +76,7 @@
         - pavucontrol
         - brightnessctl
         - playerctl
+        - mozilla-fira-mono-fonts
       state: present
     when: ansible_distribution == "Fedora"
 
