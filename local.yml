@@ -9,6 +9,7 @@
     ansible.builtin.package:
       name: 
         - kitty
+        - otf-fira-mono
         - vim
         - bash-completion
         - neofetch
