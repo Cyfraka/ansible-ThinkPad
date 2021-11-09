@@ -71,20 +71,7 @@
         - gnome-tweaks
         - cronie
         - bpytop
-        - sway
-        - waybar
-        - pavucontrol
-        - brightnessctl
-        - playerctl
-        - mozilla-fira-mono-fonts
-      state: present
-    when: ansible_distribution == "Fedora"
-
-  - name: Remove Fedora Packages
-    dnf:
-      name:
-       - epiphany
-      state: absent
+     state: present
     when: ansible_distribution == "Fedora"
 
   - name: Set .bashrc file
