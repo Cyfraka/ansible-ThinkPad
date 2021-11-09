@@ -71,7 +71,14 @@
         - gnome-tweaks
         - cronie
         - bpytop
-     state: present
+      state: present
+    when: ansible_distribution == "Fedora"
+
+  - name: Delete Fedora Packages
+    dnf:
+      name: 
+        - epiphany
+      state: absent
     when: ansible_distribution == "Fedora"
 
   - name: Set .bashrc file
