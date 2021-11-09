@@ -96,10 +96,17 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: Set .vimrc file
+  - name: set .vimrc file
     copy:
       src: files/.vimrc
       dest: /home/cyfraka/.vimrc
+      owner: cyfraka
+      group: cyfraka
+
+  - name: set .gitconfig file
+    copy:
+      src: files/.gitconfig
+      dest: /home/cyfraka/.gitconfig
       owner: cyfraka
       group: cyfraka
 
