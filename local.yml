@@ -38,12 +38,6 @@
         - grim
         - signal-desktop
         - totem
-        - virt-manager
-        - qemu
-        - qemu-arch-extra
-        - dnsmasq
-        - ovmf
-        - vde2
       state: present
     when: ansible_distribution == "Archlinux"
 
