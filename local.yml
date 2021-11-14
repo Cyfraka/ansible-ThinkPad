@@ -41,7 +41,6 @@
         - virt-manager
         - qemu
         - qemu-arch-extra
-        - ebtables
         - dnsmasq
         - ovmf
         - vde2
