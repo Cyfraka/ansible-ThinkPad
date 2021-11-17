@@ -33,7 +33,6 @@
         - polkit-gnome
         - xorg-xhost
         - gvfs
-        - gst-libav
         - eog
         - grim
         - signal-desktop
