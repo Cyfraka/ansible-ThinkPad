@@ -31,8 +31,6 @@
         - firefox
         - ttf-font-awesome
         - polkit-gnome
-        - xorg-xhost
-        - gvfs
         - eog
         - grim
         - signal-desktop
