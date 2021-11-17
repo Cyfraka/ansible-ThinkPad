@@ -25,7 +25,6 @@
         - playerctl
         - thunar
         - blueman
-        - pulseaudio-bluetooth
         - dmenu
         - xorg-xwayland
         - firefox
