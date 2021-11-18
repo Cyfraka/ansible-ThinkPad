@@ -248,6 +248,17 @@
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Super>w'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'firefox'" }
 
+  - name: gnome | keybindings | set Nautilus keybinding
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name", value: "'Nautilus'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>a'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'nautilus'" }
+
   - name: gnome | keybindings | set Workspace 1
     tags: gnome,keybindings
     become_user: cyfraka
