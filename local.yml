@@ -144,7 +144,7 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: Create waybar directory
+  - name: Create Waybar directory
     file:
       path: /home/cyfraka/.config/waybar
       state: directory
@@ -172,7 +172,7 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: Create Pictures directory
+  - name: Create Wallpapers directory
     file:
       path: /home/cyfraka/Pictures/Wallpapers
       state: directory
@@ -193,13 +193,13 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: set wallpaper
+  - name: Set wallpaper
     become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
-  - name: clock show date
+  - name: Set clock show date
     become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/interface/clock-show-date"
@@ -207,13 +207,13 @@
       key: "/org/gnome/desktop/interface/clock-show-seconds"
       value: "true"
 
-  - name: inactive timeout
+  - name: Set inactive timeout
     become_user: cyfraka
     dconf:
       key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
       value: "'nothing'"
 
-  - name: show battery percentage
+  - name: Show battery percentage
     become_user: cyfraka
     dconf:
       key: "/org/gnome/desktop/interface/show-battery-percentage"
