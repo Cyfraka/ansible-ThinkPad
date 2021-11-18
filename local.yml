@@ -30,6 +30,9 @@
         - firefox
         - ttf-font-awesome
         - polkit-gnome
+        - org-xhost
+        - gvfs
+        - gst-libav
         - eog
         - grim
         - signal-desktop
