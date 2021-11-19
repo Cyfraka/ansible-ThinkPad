@@ -204,6 +204,7 @@
     copy:
       src: /home/cyfraka/Pictures/Wallpapers/Cyfraka.jpg
       dest: /var/lib/AccountsService/users/cyfraka
+      force: true
       
   - name: set profile picture
     become: true
