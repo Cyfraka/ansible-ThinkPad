@@ -199,20 +199,6 @@
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
 
-  - name: Copy picture Cyfraka
-    become: true
-    copy:
-      src: /home/cyfraka/Pictures/Wallpapers/Cyfraka.jpg
-      dest: /var/lib/AccountsService/users/cyfraka
-      force: true
-      
-  - name: set profile picture
-    become: true
-    lineinfile:
-      path: /var/lib/AccountsService/users/cyfraka
-      regexp: '^Icon='
-      line: 'Icon=/var/lib/AccountsService/icons/cyfraka'
-
   - name: Set clock show date
     become_user: cyfraka
     dconf:
