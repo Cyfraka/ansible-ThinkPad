@@ -30,7 +30,7 @@
         - firefox
         - ttf-font-awesome
         - polkit-gnome
-        - org-xhost
+        - xorg-xhost
         - gvfs
         - gst-libav
         - eog
