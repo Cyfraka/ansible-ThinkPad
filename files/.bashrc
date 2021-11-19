@@ -28,4 +28,6 @@ unset rc
 
 PS1='[\t \[\e[01;34m\]\u\[\e[0m\]@\[\e[01;34m\]\h\[\e[0m\] \W]\\$ '
 
+alias open="xdg-open"
+
 neofetch
