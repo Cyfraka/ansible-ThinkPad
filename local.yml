@@ -12,6 +12,7 @@
         - otf-fira-mono
         - vim
         - bash-completion
+        - tmux
         - neofetch
         - gnome-tweaks
         - cronie
@@ -67,6 +68,7 @@
         - kitty
         - vim
         - bash-completion
+        - tmux
         - neofetch
         - gnome-tweaks
         - cronie
@@ -99,6 +101,13 @@
     copy:
       src: files/.vimrc
       dest: /home/cyfraka/.vimrc
+      owner: cyfraka
+      group: cyfraka
+
+  - name: set .tmux.conf file
+    copy:
+      src: files/.tmux.conf
+      dest: /home/cyfraka/.tmux.conf
       owner: cyfraka
       group: cyfraka
 
