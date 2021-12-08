@@ -19,5 +19,5 @@ If you use Fedora Linux
 > sudo ansible-pull -U https://github.com/Cyfraka/x230-ansible.git
 
 If you use openSUSE Linux
-> sudo zypper ansible git && 
+> sudo zypper ansible git && sudo groupadd cyfraka && sudo usermod -a -G cyfraka cyfraka &&
 > sudo ansible-pull -U https://github.com/Cyfraka/x230-ansible.git
