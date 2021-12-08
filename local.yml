@@ -83,6 +83,28 @@
       state: absent
     when: ansible_distribution == "Fedora"
 
+  - name: Install openSUSE Packages
+    zypper:
+      name: 
+        - kitty
+        - vim
+        - bash-completion
+        - tmux
+        - neofetch
+        - gnome-tweaks
+        - cronie
+        - bpytop
+      state: present
+    when: ansible_distribution == "openSUSE"
+
+  - name: Delete openSUSE Packages
+    zypper:
+      name: 
+        - epiphany
+      state: absent
+    when: ansible_distribution == "openSUSE"
+
+
   - name: Set .bashrc file
     copy:
       src: files/.bashrc
