@@ -223,11 +223,6 @@
       owner: cyfraka
       group: cyfraka
 
-  - name: Set wallpaper
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///home/cyfraka/Pictures/Wallpapers/80s.jpg'"
-
   - name: Set clock show date
     become_user: cyfraka
     dconf:
