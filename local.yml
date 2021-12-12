@@ -83,7 +83,7 @@
       state: absent
     when: ansible_pkg_mgr == "dnf"
 
- - name: Install openSUSE Packages
+  - name: Install openSUSE Packages
     zypper:
       name: 
         - kitty
