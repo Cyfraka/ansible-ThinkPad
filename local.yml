@@ -84,7 +84,7 @@
     when: ansible_pkg_mgr == "dnf"
 
    - name: Install Fedora Silverblue Packages
-    dnf:
+    rpm-ostree:
       name: 
         - kitty
         - vim
@@ -98,7 +98,7 @@
     when: ansible_pkg_mgr == "atomic_container"
 
   - name: Delete Fedora Silverblue Packages
-    dnf:
+    rpm-ostree:
       name: 
         - epiphany
       state: absent
