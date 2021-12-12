@@ -75,6 +75,7 @@
         - bpytop
       state: present
     when: ansible_distribution == "Fedora"
+    when: ansible_distribution_version == "35"
 
   - name: Delete Fedora Packages
     dnf:
@@ -82,6 +83,7 @@
         - epiphany
       state: absent
     when: ansible_distribution == "Fedora"
+    when: ansible_distribution_vetsion == "35"
 
   - name: Install openSUSE Packages
     zypper:
@@ -103,7 +105,6 @@
         - epiphany
       state: absent
     when: ansible_distribution == "openSUSE"
-
 
   - name: Set .bashrc file
     copy:
