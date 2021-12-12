@@ -83,6 +83,27 @@
       state: absent
     when: ansible_pkg_mgr == "dnf"
 
+  - name: Install Fedora Silverblue Packages
+    rpm-ostree:
+      name: 
+        - kitty
+        - vim
+        - bash-completion
+        - tmux
+        - neofetch
+        - gnome-tweaks
+        - cronie
+        - bpytop
+      state: present
+    when: ansible_pkg_mgr == "atomic_container"
+
+  - name: Delete Fedora Silverblue Packages
+    rpm-ostree:
+      name: 
+        - epiphany
+      state: absent
+    when: ansible_pkg_mgr == "atomic_container"
+
   - name: Install openSUSE Packages
     zypper:
       name: 
