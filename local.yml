@@ -23,9 +23,7 @@
         - swayidle
         - swaylock
         - brightnessctl
-        - pavucontrol
         - playerctl
-        - thunar
         - blueman
         - dmenu
         - xorg-xwayland
