@@ -15,6 +15,7 @@
         - tmux
         - neofetch
         - gnome-tweaks
+        - gnome-themes-extra
         - cronie
         - bpytop
         - sway
