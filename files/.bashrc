@@ -30,4 +30,10 @@ PS1='[\t \[\e[01;34m\]\u\[\e[0m\]@\[\e[01;34m\]\h\[\e[0m\] \W]\\$ '
 
 alias open="xdg-open"
 
+# Set tmux auto attach
+if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
+ tmux attach-session -t work || tmux new-session -s work
+fi
+
+# Neofetch
 neofetch
