@@ -32,7 +32,7 @@ alias open="xdg-open"
 
 # Set tmux auto attach
 if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
- tmux attach-session -t work || tmux new-session -s work
+ tmux attach-session -t XMR || tmux new-session -s XMR
 fi
 
 # Neofetch
