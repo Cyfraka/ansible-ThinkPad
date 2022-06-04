@@ -12,6 +12,9 @@ then
 fi
 export PATH
 
+# Kitty - fix SSH
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
