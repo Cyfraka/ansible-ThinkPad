@@ -35,7 +35,6 @@
         - gst-libav
         - eog
         - grim
-        - signal-desktop
         - totem
       state: present
     when: ansible_distribution == "Archlinux"
