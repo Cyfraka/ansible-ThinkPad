@@ -29,7 +29,7 @@ fi
 
 unset rc
 
-PS1='[\t \[\e[01;36m\]\u\[\e[0m\]@\[\e[01;36m\]\h\[\e[0m\] \W]\\$ '
+PS1='[\t \[\e[01;34m\]\u\[\e[0m\]@\[\e[01;34m\]\h\[\e[0m\] \W]\\$ '
 
 # Set tmux auto attach
 if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
