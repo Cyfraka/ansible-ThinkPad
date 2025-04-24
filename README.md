@@ -13,6 +13,7 @@ After the initial ansible-pull command the playbok is creating a user and cron j
 If you use Arch Linux
 > sudo pacman -S ansible git && 
 > sudo ansible-pull -U https://github.com/Cyfraka/My-ThinkPad-Ansible.git
+
 If you use Fedora Linux 
 > sudo dnf install ansible git && 
 > sudo ansible-pull -U https://github.com/Cyfraka/My-ThinkPad-Ansible.git
