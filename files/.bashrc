@@ -36,5 +36,5 @@ if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
  tmux attach-session -t XMR || tmux new-session -s XMR
 fi
 
-# Neofetch
-neofetch
+# Fastfetch
+fastfetch
