@@ -67,7 +67,7 @@
         - vim
         - bash-completion
         - tmux
-        - neofetch
+        - fastfetch
         - gnome-tweaks
         - cronie
         - bpytop
