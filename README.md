@@ -1,5 +1,5 @@
-## Ansible ThinkPad X230
-Ansible configuration for my ThinkPad X230 
+## Ansible ThinkPads
+Ansible configuration for my ThinkPads 
 
 ## Work in progress!
 This playbook is working but is under development.
