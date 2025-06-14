@@ -1,7 +1,3 @@
-Sure! Here’s a shorter version with installation commands in one line:
-
----
-
 # Ansible ThinkPad Setup
 
 This repo provides Ansible playbooks and config files to automate setup, dotfile management, and software installation on ThinkPad laptops or VMs.
