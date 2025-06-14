@@ -1,6 +1,6 @@
 # Ansible ThinkPad Setup
 
-This repo provides Ansible playbooks and config files to automate setup, dotfile management, and software installation on ThinkPad laptops or VMs.
+This repo provides Ansible playbooks and config files to automate setup, dotfile management, and software installation on my ThinkPad laptops or VMs.
 
 ## Features
 
