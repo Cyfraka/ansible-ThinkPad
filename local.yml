@@ -13,7 +13,7 @@
         - vim
         - bash-completion
         - tmux
-        - neofetch
+        - fastfetch
         - gnome-tweaks
         - gnome-themes-extra
         - cronie
