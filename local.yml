@@ -262,7 +262,7 @@
       key: "{{ item.key }}"
       value: "{{ item.value}}"
     with_items:
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Kitty'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Kitty2'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>Return'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'kitty'" }
 
