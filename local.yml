@@ -288,12 +288,12 @@
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>z'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'nautilus'" }
 
-   - name: gnome | keybindings | set Kitty keybinding
-     tags: gnome,keybindings
-     become_user: cyfraka
-     dconf:
-       key: "{{ item.key }}"
-       value: "{{ item.value}}"
+  - name: gnome | keybindings | set Kitty keybinding
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "{{ item.key }}"
+      value: "{{ item.value}}"
     with_items:
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name", value: "'Kitty'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/binding", value: "'<Super>x'" }
