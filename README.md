@@ -1,19 +1,45 @@
-## Ansible ThinkPads
-Ansible configuration for my ThinkPads 
+Sure! Here’s a shorter version with installation commands in one line:
 
-## Work in progress!
-This playbook is working but is under development.
-The idea behind it is to be used as a replacement for my previus "dot files bare repository".
+---
 
-## What it does?
-By this playbook I am able to manage installed application and config/dot files to multiple mashines and VM's at the same time.
-After the initial ansible-pull command the playbok is creating a user and cron job to pull the changes if this repository is updated.
+# Ansible ThinkPad Setup
 
-## How to use it?
-If you use Arch Linux
-> sudo pacman -S ansible git && 
-> sudo ansible-pull -U https://github.com/Cyfraka/My-ThinkPad-Ansible.git
+This repo provides Ansible playbooks and config files to automate setup, dotfile management, and software installation on ThinkPad laptops or VMs.
 
-If you use Fedora Linux 
-> sudo dnf install ansible git && 
-> sudo ansible-pull -U https://github.com/Cyfraka/My-ThinkPad-Ansible.git
+## Features
+
+- Installs and updates preferred apps, dotfiles (`.bashrc`, `.vimrc`, Waybar themes), and configs across all devices.
+- Supports Arch & Fedora Linux.
+- Self-updating via cron and ansible-pull.
+
+## Included
+
+- Custom shell configs: aliases, SSH/tmux automation, fastfetch, etc.
+- `.vimrc` with improved defaults, search, and usability.
+- Waybar themes (`style.css`, needs `otf-font-awesome`).
+- More in `files/`.
+
+## Quick Start
+
+**Arch Linux:**  
+```bash
+sudo pacman -S ansible git && sudo ansible-pull -U https://github.com/Cyfraka/ansible-ThinkPad.git
+```
+
+**Fedora Linux:**  
+```bash
+sudo dnf install ansible git && sudo ansible-pull -U https://github.com/Cyfraka/ansible-ThinkPad.git
+```
+
+## Notes
+
+- Work in progress—expect updates.
+- Fork and customize as needed.
+
+## License
+
+Personal use; see file headers for details.
+
+**Maintained by [Cyfraka](https://github.com/Cyfraka)**
+
+---
