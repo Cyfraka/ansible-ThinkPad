@@ -35,6 +35,7 @@
         - eog
         - grim
         - totem
+        - talescale
       state: present
     when: ansible_distribution == "Archlinux"
 
