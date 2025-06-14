@@ -262,8 +262,8 @@
       key: "{{ item.key }}"
       value: "{{ item.value}}"
     with_items:
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Kitty2'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>Return'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Kitty'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>z'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'kitty'" }
 
   - name: gnome | keybindings | set Firefox keybinding
@@ -285,19 +285,8 @@
       value: "{{ item.value}}"
     with_items:
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name", value: "'Nautilus'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>z'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>x'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'nautilus'" }
-
-  - name: gnome | keybindings | set Kitty keybinding
-    tags: gnome,keybindings
-    become_user: cyfraka
-    dconf:
-      key: "{{ item.key }}"
-      value: "{{ item.value}}"
-    with_items:
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name", value: "'Kitty'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/binding", value: "'<Super>x'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/command", value: "'kitty'" }
 
   - name: gnome | keybindings | set Workspace 1
     tags: gnome,keybindings
