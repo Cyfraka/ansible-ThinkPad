@@ -53,7 +53,7 @@
         - gnome-software
         - gnome-system-monitor
         - gnome-terminal
-	- gnome-console
+        - gnome-console
         - gnome-user-docs
         - gnome-epub-thumbnailer
         - epiphany
