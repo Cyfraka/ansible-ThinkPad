@@ -53,9 +53,11 @@
         - gnome-software
         - gnome-system-monitor
         - gnome-terminal
+	- gnome-console
         - gnome-user-docs
         - gnome-epub-thumbnailer
         - epiphany
+	- htop
       state: absent
     when: ansible_distribution == "Archlinux"
 
