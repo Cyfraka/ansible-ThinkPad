@@ -57,7 +57,7 @@
         - gnome-user-docs
         - gnome-epub-thumbnailer
         - epiphany
-	- htop
+        - htop
       state: absent
     when: ansible_distribution == "Archlinux"
 
