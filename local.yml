@@ -262,7 +262,7 @@
       value: "{{ item.value}}"
     with_items:
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name", value: "'Kitty'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>a'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>x'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'kitty'" }
 
   - name: gnome | keybindings | set Firefox keybinding
