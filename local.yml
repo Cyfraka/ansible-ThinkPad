@@ -36,6 +36,8 @@
         - grim
         - totem
         - tailscale
+        - signal-desktop
+        - discord
       state: present
     when: ansible_distribution == "Archlinux"
 
