@@ -254,7 +254,7 @@
     become_user: cyfraka
     dconf:
       key: "/org/gnome/shell/keybindings/show-apps"
-      value: "[]"
+      value: "@as []"
 
   - name: gnome | keybindings | set custom-keybindings
     tags: gnome,keybindings
