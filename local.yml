@@ -250,6 +250,12 @@
       key: "/org/gnome/desktop/interface/show-battery-percentage"
       value: "true"
 
+  - name: Remove default Super+A binding from Show Applications
+    become_user: cyfraka
+    dconf:
+      key: "/org/gnome/shell/keybindings/show-apps"
+      value: "[]"
+
   - name: gnome | keybindings | set custom-keybindings
     tags: gnome,keybindings
     become_user: cyfraka
@@ -268,6 +274,17 @@
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding", value: "'<Super>a'" }
       - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command", value: "'kitty'" }
 
+ - name: gnome | keybindings | set Kitty keybinding
+    tags: gnome,keybindings
+    become_user: cyfraka
+    dconf:
+      key: "{{ item.key }}"
+      value: "{{ item.value}}"
+    with_items:
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "'Kitty'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Super>a'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'kitty'" }
+
   - name: gnome | keybindings | set Firefox keybinding
     tags: gnome,keybindings
     become_user: cyfraka
@@ -275,9 +292,9 @@
       key: "{{ item.key }}"
       value: "{{ item.value}}"
     with_items:
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name", value: "'Firefox'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding", value: "'<Super>w'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command", value: "'firefox'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name", value: "'Firefox'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>w'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'firefox'" }
 
   - name: gnome | keybindings | set Nautilus keybinding
     tags: gnome,keybindings
@@ -286,9 +303,9 @@
       key: "{{ item.key }}"
       value: "{{ item.value}}"
     with_items:
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name", value: "'Nautilus'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding", value: "'<Super>z'" }
-      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command", value: "'nautilus'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/name", value: "'Nautilus'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/binding", value: "'<Super>z'" }
+      - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/command", value: "'nautilus'" }
 
   - name: gnome | keybindings | set Workspace 1
     tags: gnome,keybindings
